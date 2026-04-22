@@ -1,217 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Atrous</title>
-<meta name="description" content="Studio Atrous - Luxury Interior Design Studio">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family: Arial, sans-serif;
-  background:#f8f6f2;
-  color:#222;
-  line-height:1.6;
-}
-
-/* HERO SECTION */
-header{
-  min-height:100vh;
-  background:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-}
-
-.hero{
-  background:rgba(0,0,0,0.45);
-  padding:50px 35px;
-  border-radius:12px;
-  max-width:700px;
-}
-
-.logo{
-  width:180px;
-  max-width:100%;
-  margin-bottom:20px;
-}
-
-.hero h1{
-  color:#fff;
-  font-size:52px;
-  letter-spacing:3px;
-  margin-bottom:15px;
-}
-
-.hero p{
-  color:#f2f2f2;
-  font-size:20px;
-  margin-bottom:28px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 28px;
-  background:#ffffff;
-  color:#111;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:4px;
-}
-
-/* GENERAL SECTIONS */
-section{
-  padding:80px 10%;
-}
-
-h2{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:25px;
-}
-
-.about p{
-  max-width:800px;
-  margin:auto;
-  text-align:center;
-  font-size:18px;
-  color:#555;
-}
-
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:24px;
-  margin-top:35px;
-}
-
-.card{
-  background:#fff;
-  padding:30px;
-  border-radius:10px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-  text-align:center;
-}
-
-/* PORTFOLIO */
-.portfolio{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-  margin-top:35px;
-}
-
-.portfolio img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  border-radius:10px;
-}
-
-/* CONTACT */
-.contact{
-  background:#222;
-  color:#fff;
-  text-align:center;
-}
-
-.contact p{
-  margin-top:10px;
-}
-
-.contact a{
-  color:#fff;
-  text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-}
-
-/* MOBILE */
-@media (max-width:768px){
-  .hero h1{
-    font-size:38px;
-  }
-
-  .hero p{
-    font-size:18px;
-  }
-
-  .logo{
-    width:130px;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Atrous — Luxury Interior Design</title>
+  <meta name="description" content="Studio Atrous creates elegant, functional and timeless interiors tailored to modern living." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-<header>
-  <div class="hero">
+  <!-- ──────────── NAV ──────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo-wrap">
+      <a href="#" class="nav__logo-link">
+        <img id="nav-logo" class="nav__logo-img" src="assets/logo.png" alt="Studio Atrous" onerror="this.style.display='none'; document.getElementById('nav-logo-text').style.display='block'" />
+        <span id="nav-logo-text" class="nav__logo-text" style="display:none;">Studio Atrous</span>
+      </a>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <!-- CHANGE logo.png to your exact uploaded logo filename -->
-    <img src="logo.png" alt="Studio Atrous Logo" class="logo">
+  <!-- ──────────── HERO ──────────── -->
+  <header class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Est. 2018 · Surat, India</p>
+      <h1 class="hero__title reveal">
+        <span>Studio</span>
+        <em>Atrous</em>
+      </h1>
+      <p class="hero__sub reveal">Luxury Interior Design Studio</p>
+      <a href="#portfolio" class="btn btn--light reveal">View Projects</a>
+    </div>
+    <div class="hero__scroll">Scroll</div>
+  </header>
 
-    <h1>Studio Atrous</h1>
-    <p>Luxury Interior Design Studio</p>
+  <!-- ──────────── ABOUT ──────────── -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <span class="section-label reveal">About Us</span>
+        <h2 class="section-title reveal">Spaces That Tell <em>Your</em> Story</h2>
+        <p class="about__body reveal">
+          Studio Atrous creates elegant, functional and timeless interiors tailored to modern living.
+          We transform homes into refined spaces that blend beauty, comfort and personality —
+          turning every room into an expression of the people who inhabit it.
+        </p>
+        <a href="#contact" class="btn btn--dark reveal">Work With Us</a>
+      </div>
+      <div class="about__visual reveal">
+        <div class="about__img-frame">
+          <img
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+            alt="Elegant living room by Studio Atrous"
+            loading="lazy"
+          />
+        </div>
+        <div class="about__accent-box">
+          <span class="about__stat">200+</span>
+          <span class="about__stat-label">Projects Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <a href="#portfolio" class="btn">View Projects</a>
+  <!-- ──────────── SERVICES ──────────── -->
+  <section class="services section" id="services">
+    <div class="container">
+      <span class="section-label reveal">What We Do</span>
+      <h2 class="section-title reveal">Our Services</h2>
+      <div class="services__grid">
+        <div class="service-card reveal">
+          <span class="service-card__num">01</span>
+          <h3>Residential Interiors</h3>
+          <p>Full-home transformations built around your life, taste, and vision.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-card__num">02</span>
+          <h3>Kitchen Design</h3>
+          <p>Functional kitchens with refined materials and considered layouts.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-card__num">03</span>
+          <h3>Space Planning</h3>
+          <p>Intelligent spatial strategies that maximise flow and light.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-card__num">04</span>
+          <h3>Furniture Styling</h3>
+          <p>Curated selection and placement of furniture for cohesive living.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── PORTFOLIO ──────────── -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <span class="section-label reveal">Our Work</span>
+      <h2 class="section-title reveal">Featured Projects</h2>
+    </div>
+    <div class="portfolio__grid">
+      <figure class="portfolio__item reveal portfolio__item--tall">
+        <img
+          src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+          alt="Modern living space" loading="lazy"
+        />
+        <figcaption>
+          <span class="portfolio__tag">Residential</span>
+          <h4>The Crescent Villa</h4>
+        </figcaption>
+      </figure>
+      <figure class="portfolio__item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+          alt="Bedroom interior" loading="lazy"
+        />
+        <figcaption>
+          <span class="portfolio__tag">Bedroom</span>
+          <h4>Midnight Retreat</h4>
+        </figcaption>
+      </figure>
+      <figure class="portfolio__item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80"
+          alt="Kitchen design" loading="lazy"
+        />
+        <figcaption>
+          <span class="portfolio__tag">Kitchen</span>
+          <h4>Marble & Oak Kitchen</h4>
+        </figcaption>
+      </figure>
+      <figure class="portfolio__item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=900&q=80"
+          alt="Dining room" loading="lazy"
+        />
+        <figcaption>
+          <span class="portfolio__tag">Dining</span>
+          <h4>The Amber Dining Room</h4>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ──────────── CONTACT ──────────── -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <span class="section-label reveal">Get In Touch</span>
+      <h2 class="section-title reveal">Let's Design <em>Your Space</em></h2>
+      <p class="contact__sub reveal">
+        Tell us about your project and we'll be in touch within 48 hours.
+      </p>
+      <form class="contact__form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name" />
+          <input type="email" id="email" name="email" placeholder="Email Address" required autocomplete="email" />
+        </div>
+        <input type="text" id="subject" name="subject" placeholder="Project Type (e.g. Residential, Kitchen)" />
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your space…" required></textarea>
+        <button type="submit" class="btn btn--light">Send Enquiry</button>
+        <p class="form-success" id="form-success" hidden>Thank you! We'll be in touch soon.</p>
+      </form>
+      <div class="contact__direct reveal">
+        <p>Prefer email?</p>
+        <a href="mailto:hello@studioatrous.com" class="contact__email">hello@studioatrous.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── FOOTER ──────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img id="footer-logo" class="footer__logo" src="assets/logo.png" alt="Studio Atrous"
+          onerror="this.style.display='none'; document.getElementById('footer-logo-text').style.display='block'" />
+        <span id="footer-logo-text" class="footer__logo-text" style="display:none;">Studio Atrous</span>
+        <p>Luxury Interior Design Studio</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">© 2026 Studio Atrous. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ──────────── LOGO UPLOAD PANEL ──────────── -->
+  <div class="logo-upload-fab" id="fab" title="Upload Logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M4 16l4-4 4 4 4-6 4 6M4 20h16M12 3v10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
-</header>
 
-<section class="about">
-  <h2>About Us</h2>
-  <p>
-    Studio Atrous creates elegant, functional and timeless interiors tailored to modern living.
-    We transform homes into refined spaces that blend beauty, comfort and personality.
-  </p>
-</section>
-
-<section>
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <div class="card">Residential Interiors</div>
-    <div class="card">Kitchen Design</div>
-    <div class="card">Space Planning</div>
-    <div class="card">Furniture Styling</div>
+  <div class="logo-upload-panel" id="upload-panel">
+    <button class="logo-upload-panel__close" id="close-panel">✕</button>
+    <h3>Upload Logo</h3>
+    <p>Replace the Studio Atrous logo across the site. Saved locally in your browser.</p>
+    <label class="upload-drop" id="upload-drop" for="logo-file-input">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="drop-label">Drop image here or <u>browse</u></span>
+      <input type="file" id="logo-file-input" accept="image/*" hidden />
+    </label>
+    <div class="upload-preview" id="upload-preview" hidden>
+      <img id="preview-img" src="" alt="Logo preview" />
+      <div class="upload-preview__actions">
+        <button class="btn btn--dark" id="apply-logo">Apply Logo</button>
+        <button class="btn btn--outline" id="reset-logo">Reset to Default</button>
+      </div>
+    </div>
   </div>
-</section>
+  <div class="overlay" id="overlay"></div>
 
-<section id="portfolio">
-  <h2>Featured Projects</h2>
-
-  <div class="portfolio">
-    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Project 1">
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Project 2">
-    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Project 3">
-  </div>
-</section>
-
-<section class="contact">
-  <h2>Let's Design Your Space</h2>
-  <p>Email us at:</p>
-  <p><a href="mailto:hello@studioatrous.com">hello@studioatrous.com</a></p>
-</section>
-
-<footer>
-  © 2026 Studio Atrous. All Rights Reserved.
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
